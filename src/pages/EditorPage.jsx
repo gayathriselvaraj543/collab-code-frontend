@@ -98,7 +98,7 @@ const EditorPage = () => {
     setOutput("Running...");
 
     try {
-      const response = await fetch("http://localhost:5000/run-code", {
+      const response = await fetch("https://collab-code-backend-2-0.onrender.com/run-code", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
