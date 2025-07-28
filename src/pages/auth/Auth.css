@@ -1,0 +1,131 @@
+/* Global */
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Background */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+/* Glass Box */
+.auth-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  animation: popIn 0.5s ease-out;
+}
+
+/* Title */
+.auth-box h2 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+/* Input Fields */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-group input::placeholder {
+  color: #ddd;
+}
+
+.form-group input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  outline: 2px solid #00c6ff;
+}
+
+/* Auth Button */
+.auth-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.auth-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 198, 255, 0.4);
+}
+
+/* Error Message */
+.error-message {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #ff5e5e;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Links */
+.auth-box p {
+  text-align: center;
+  color: #eee;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.auth-box a {
+  color: #00c6ff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.auth-box a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
